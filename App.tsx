@@ -2,6 +2,7 @@ import { NativeBaseProvider, Box, Button, useColorMode } from "native-base";
 import { useFonts } from "expo-font";
 import { theme } from "./themes";
 import ThemeToggle from "./components/ThemeToggle";
+import Header from "./components/Header";
 
 export default function App() {
   useFonts({
@@ -16,9 +17,7 @@ export default function App() {
         _dark={{ bgColor: "bg.dark" }}
         _light={{ bgColor: "bg.light" }}
       >
-        <Box _dark={{ bgColor: "bg.darkGrey" }} _light={{ bgColor: "white" }}>
-          <ThemeToggle />
-        </Box>
+        <Header />
       </Box>
     </NativeBaseProvider>
   );
